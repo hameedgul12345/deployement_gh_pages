@@ -5,12 +5,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",            // <- Add this
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",     // <- Vite outputs to "dist" by default
+  "lint": "eslint ."
+}
+,
   "dependencies": {
     "gh-pages": "^6.3.0",
     "react": "^19.2.0",
